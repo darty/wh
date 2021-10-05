@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00eafa44f7e863849a3f92456077b22b, type: 3}
+  m_Name: TeleportPointSettings
+  m_EditorClassIdentifier: 
+  pointVisibleMaterial: {fileID: 2100000, guid: 29a7edd2b6ddb0d4aab474925ccb8c43,
+    type: 2}
+  pointLockedMaterial: {fileID: 2100000, guid: 1bb42516b67813746ac75fb1bc68f8ee, type: 2}
+  pointHighlightedMaterial: {fileID: 2100000, guid: 6e34bc55571d8af48bb536769f365837,
+    type: 2}
+  areaVisibleMaterial: {fileID: 2100000, guid: 9d1cd03ac76a77042b5195b1fe802e10, type: 2}
+  areaLockedMaterial: {fileID: 2100000, guid: 644b5c682e4eb5542918a3a2011321be, type: 2}
+  areaHighlightedMaterial: {fileID: 2100000, guid: c4cd2c6073156074187cc878ecc517fd,
+    type: 2}
