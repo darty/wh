@@ -1,16 +1,12 @@
 # Weirding Haptics
 
-## Paper
+Weirding Haptics is a design tool for vibrotactile feedback produced with off-the-shelf devices in Virtual Reality. Its specificity is to abstract from complex parameters and enable novice designers to designing for haptics. Designers can use their voices while manipulating virtual objects to vocalize the intended vibrotactile feedback, and directly experience the results. A simple Graphical User Interface (GUI) enables them to fine-tune their design once recorded.
 
-**Weirding Haptics: In-Situ Prototyping of Vibrotactile Feedback in Virtual Reality through Vocalization**
+Want to make a lightsaber more tangible in VR? We got you covered 😎
 
-**Authors:** Donald Degraen, Bruno Fruchard, Frederik Smolders, Emmanouil Potetsianakis, Seref Güngör, Antonio Krüger, Jürgen Steimle
+![lightsaber example](https://user-images.githubusercontent.com/5594020/136162577-57eaf062-4ecc-455b-ba79-f796e545ea34.png)
 
-**Links:**
-- [DOI](https://doi.org/10.1145/3472749.3474797)
-
-**Abstract:**
-Effective haptic feedback in virtual reality (VR) is an essential element for creating convincing immersive experiences. To design such feedback, state-of-the-art VR setups provide APIs for programmatically generating controller vibration patterns. While tools for designing vibrotactile feedback keep evolving, they often require expert knowledge and rarely support direct manipulation methods for mapping feedback to user interactions within the VR environment. To address these challenges, we contribute a novel concept called Weirding Haptics, that supports fast-prototyping by leveraging the user's voice to design such feedback while manipulating virtual objects in-situ. Through a pilot study (N = 9) focusing on how tactile experiences are vocalized during object manipulation, we identify spatio-temporal mappings and supporting features needed to produce intended vocalizations. Based Weirding Haptics, we built a VR design tool informed by the results of the pilot study. This tool enables users to design tactile experiences using their voice while manipulating objects, provides a set of modifiers for fine-tuning the created experiences in VR, and allows to rapidly compare various experiences by feeling them. Results from an validation study (N = 8) show that novice hapticians can vocalize experiences and fine-tune their designs with the fine-tuning modifiers to match their intentions. We conclude our work by discussing uncovered design implications for direct manipulation and vocalization of vibrotactile feedback in immersive virtual environments.
+You can learn more about the concept and see examples here: [https://www.youtube.com/watch?v=3FTvh_P0aK4](https://www.youtube.com/watch?v=3FTvh_P0aK4)
 
 ## Usage
 
@@ -61,9 +57,25 @@ If you want to define the hand pose when grabbing the object:
 - PGVRInteractableObject_GrabPose_SteamVR
 - SteamVR_Skeleton_Poser
 
+
+## Paper
+
+The Weirding Haptics concept originated from a research project led by Donald Degraen (UMTL, DFKI - Saarland University) and Bruno Fruchard (HCI Lab, Saarland University)
+This project was published at the [ACM UIST'21 conference](https://uist.acm.org/uist2021/).
+DOI: [https://doi.org/10.1145/3472749.3474797](https://doi.org/10.1145/3472749.3474797)
+
+
+> **Weirding Haptics: In-Situ Prototyping of Vibrotactile Feedback in Virtual Reality through Vocalization**
+>
+> **Authors:** Donald Degraen, Bruno Fruchard, Frederik Smolders, Emmanouil Potetsianakis, Seref Güngör, Antonio Krüger, Jürgen Steimle
+>
+> **Abstract:**
+> Effective haptic feedback in virtual reality (VR) is an essential element for creating convincing immersive experiences. To design such feedback, state-of-the-art VR setups provide APIs for programmatically generating controller vibration patterns. While tools for designing vibrotactile feedback keep evolving, they often require expert knowledge and rarely support direct manipulation methods for mapping feedback to user interactions within the VR environment. To address these challenges, we contribute a novel concept called Weirding Haptics, that supports fast-prototyping by leveraging the user's voice to design such feedback while manipulating virtual objects in-situ. Through a pilot study (N = 9) focusing on how tactile experiences are vocalized during object manipulation, we identify spatio-temporal mappings and supporting features needed to produce intended vocalizations. Based Weirding Haptics, we built a VR design tool informed by the results of the pilot study. This tool enables users to design tactile experiences using their voice while manipulating objects, provides a set of modifiers for fine-tuning the created experiences in VR, and allows to rapidly compare various experiences by feeling them. Results from an validation study (N = 8) show that novice hapticians can vocalize experiences and fine-tune their designs with the fine-tuning modifiers to match their intentions. We conclude our work by discussing uncovered design implications for direct manipulation and vocalization of vibrotactile feedback in immersive virtual environments.
+
+
 ## Citation
 
-Please use the following bibtex entry:
+If you want to reference our work, please use the following bibtex entry:
 
 ```
 @inproceedings{degraenfruchard2021weirdinghaptics,
