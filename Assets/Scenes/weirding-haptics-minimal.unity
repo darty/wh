@@ -255,7 +255,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 1f10915bc999d47409a40439e292473a, type: 3}
     m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 929696741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ba3d5cf6274f9647a94ead4f0168afb, type: 3}
+  m_Script: {fileID: 11500000, guid: 81f699457a1e42044a56b4dcd23775ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pivotCamera: {fileID: 77204520}
@@ -5227,7 +5227,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    m_Font: {fileID: 12800000, guid: 1f10915bc999d47409a40439e292473a, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -8066,7 +8066,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 1f10915bc999d47409a40439e292473a, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0

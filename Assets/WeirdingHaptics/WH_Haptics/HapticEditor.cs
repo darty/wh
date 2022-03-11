@@ -277,7 +277,7 @@ namespace Polygoat.Haptics
         private void InferMappingBasedOnRecordData(HapticInteractable.InteractionState actionType)
         {
             if (hapticEventData == null) { 
-                Debug.LogError("No haptic event data");
+                // Debug.LogError("No haptic event data");
                 return;
             }
 
@@ -462,14 +462,14 @@ namespace Polygoat.Haptics
         {
             if (grabMenus.ContainsKey(hapticInteractable.Uid))
             {
-                Debug.LogError("Grab menus already displayed");
+                // Debug.LogError("Grab menus already displayed");
                 return;
             }
 
             // no grab event to display
             if (hapticData == null || hapticData.grabEventData.Count == 0)
             {
-                Debug.Log("No event to display");
+                // Debug.Log("No event to display");
                 return;
             }
 
@@ -486,7 +486,7 @@ namespace Polygoat.Haptics
                 // clean hapticEvent if no audioclip loaded
                 if (hapticData.grabEventData[eventID].AudioClip == null)
                 {
-                    Debug.LogWarning("Removing grab event data (audioclip null)");
+                    // Debug.LogWarning("Removing grab event data (audioclip null)");
                     hapticData.grabEventData.RemoveAt(eventID);
                     continue;
                 }
@@ -504,7 +504,7 @@ namespace Polygoat.Haptics
         {
             if (hapticInteractable == null || !grabMenus.ContainsKey(hapticInteractable.Uid))
             {
-                Debug.LogError("no grab menu to remove (index = " + index + ")");
+                // Debug.LogError("no grab menu to remove (index = " + index + ")");
             }
 
             if (index >= 0 && grabMenus[hapticInteractable.Uid].Count > index)
@@ -520,7 +520,7 @@ namespace Polygoat.Haptics
         {
             if (hapticInteractable == null || !grabMenus.ContainsKey(hapticInteractable.Uid))
             {
-                Debug.Log("no menu to reposition");
+                // Debug.Log("no menu to reposition");
             }
             Debug.Log("repositioning grab menus");
 
@@ -541,7 +541,7 @@ namespace Polygoat.Haptics
         {
             if (touchMenus.ContainsKey(hapticInteractable.Uid))
             {
-                Debug.LogError("Touch menus already displayed");
+                // Debug.LogError("Touch menus already displayed");
                 return;
             }
 
@@ -564,7 +564,7 @@ namespace Polygoat.Haptics
                 for (int i = 0; i < hapticData.touchEventData.Count; i++)
                     if (hapticData.touchEventData[eventID].AudioClip == null)
                     {
-                        Debug.LogWarning("Removing touch event data (audioclip null)");
+                        // Debug.LogWarning("Removing touch event data (audioclip null)");
                         hapticData.touchEventData.RemoveAt(eventID);
                         continue;
                     }
@@ -585,7 +585,7 @@ namespace Polygoat.Haptics
         {
             if (hapticInteractable == null || !touchMenus.ContainsKey(hapticInteractable.Uid))
             {
-                Debug.LogError("no touch menu to remove (index = " + index + ")");
+                // Debug.LogError("no touch menu to remove (index = " + index + ")");
             }
 
             if (index >= 0 && touchMenus[hapticInteractable.Uid].Count > index)
@@ -658,13 +658,13 @@ namespace Polygoat.Haptics
         {
             if (hapticEventData == null)
             {
-                Debug.LogError("hapticEventData is null");
+                // Debug.LogError("hapticEventData is null");
                 return;
             }
 
             if (hapticEventData == null || hapticEventData.AudioClip == null)
             {
-                Debug.LogError("no audioclip to play");
+                // Debug.LogError("no audioclip to play");
                 return;
             }
 
@@ -712,7 +712,7 @@ namespace Polygoat.Haptics
             if (string.IsNullOrEmpty(micDevice))
                 return;
 
-            Debug.Log("StartRecording micDevice = " + micDevice);
+            // Debug.Log("StartRecording micDevice = " + micDevice);
             this.hapticEventData = hapticEventData;
             this.hapticEventData.PrepareForRecord();
             recordingClip = Microphone.Start(micDevice, false, defaultLengthSec, defaultFrequency);
@@ -733,7 +733,7 @@ namespace Polygoat.Haptics
                 if (this.hapticInteractable != null && this.hapticInteractable.HasInterpolation())
                 {
                     float lerp = this.hapticInteractable.GetInterpolation();
-                    Debug.Log("record positional data, lerp = " + lerp);
+                    // Debug.Log("record positional data, lerp = " + lerp);
                     this.hapticEventData.AddPositionalData(time, lerp);
                 }
 
@@ -754,7 +754,7 @@ namespace Polygoat.Haptics
 
             if (micDevices.Length < 1)
             {
-                Debug.LogError("No microphone vailable");
+                // Debug.LogError("No microphone vailable");
                 return null;
             }
 
@@ -773,7 +773,7 @@ namespace Polygoat.Haptics
             if (string.IsNullOrEmpty(micDevice))
                 return;
 
-            Debug.Log("StopRecording micDevice = " + micDevice);
+            // Debug.Log("StopRecording micDevice = " + micDevice);
             int currentPosition = Microphone.GetPosition(micDevice);
             // currentPosition goes back to 0 when Microphone recorded for 10s
             if(Microphone.IsRecording(micDevice))
@@ -787,7 +787,7 @@ namespace Polygoat.Haptics
             {
                 if (recordingClip.samples == 0)
                 {
-                    Debug.LogError("Did not record any samples");
+                    // Debug.LogError("Did not record any samples");
                     //TODO need to delete event data here
                     return;
                 }
@@ -799,7 +799,7 @@ namespace Polygoat.Haptics
                         currentPosition = recordingClip.samples;
                     else // no data recorded because movement too fast
                     {
-                        Debug.LogWarning("No data recorded, recording event too fast: " + interactionTime + "s");
+                        // Debug.LogWarning("No data recorded, recording event too fast: " + interactionTime + "s");
                         if (recordedType == HapticInteractable.InteractionState.Grabbed)
                             hapticData?.grabEventData.RemoveAt(hapticData.grabEventData.Count - 1);
                         else
@@ -843,8 +843,8 @@ namespace Polygoat.Haptics
                 // positional
                 if (linearConstraint != null)
                 {
-                    Debug.Log("TIMESCALING:: Do your timescaling here");
-                    Debug.Log("TIMESCALING:: Rubberband library removed to avoid conflicts with licensing");
+                    // Debug.Log("TIMESCALING:: Do your timescaling here");
+                    // Debug.Log("TIMESCALING:: Rubberband library removed to avoid conflicts with licensing");
 
                     // TimeScaling timeScaler = this.GetComponent<TimeScaling>();
                     // Debug.Log("TIMESCALING:: timeScaler " + timeScaler);

@@ -129,7 +129,7 @@ public class LightHapticEventMenu : MonoBehaviour
         Destroy(this.gameObject);
         RemoveEventData(eventIndex);
         HapticEditor.Instance.SaveHapticData();
-        Debug.Log("trying to remove");
+        // Debug.Log("trying to remove");
     }
 
     private void HandleSettingsButtonClick()
@@ -140,7 +140,7 @@ public class LightHapticEventMenu : MonoBehaviour
 
     private void HandleEnabledValueChanged(bool enabled)
     {
-        Debug.Log("HandleEnabledValueChanged");
+        // Debug.Log("HandleEnabledValueChanged");
         CurrentHapticEventData.enabled = enabled;
     }
 
@@ -280,14 +280,14 @@ public class LightHapticEventMenu : MonoBehaviour
                     {
                         if (sprite == null)
                         {
-                            Debug.LogError("tex == null");
+                            // Debug.LogError("tex == null");
                             return;
                         }
-                        Debug.Log("saveTextures: " + saveTextures);
+                        // Debug.Log("saveTextures: " + saveTextures);
                         //if (saveTextures)
                         //{
                             string name = Path.GetFileNameWithoutExtension(CurrentHapticEventData.AudioClipFullPath);
-                            Debug.Log("name: " + name);
+                            // Debug.Log("name: " + name);
                             // Path.Combine(Application.streamingAssetsPath, audioClipSubPath);
                             SaveSpriteToFile(sprite, Path.GetFileNameWithoutExtension(name));
                         //}
@@ -326,7 +326,7 @@ public class LightHapticEventMenu : MonoBehaviour
         {
             Directory.CreateDirectory(dirPath);
         }
-        Debug.Log("Writing sprite to: " + outfile + ".png");
+        // Debug.Log("Writing sprite to: " + outfile + ".png");
         File.WriteAllBytes(dirPath + outfile + ".png", bytes);
 
     }

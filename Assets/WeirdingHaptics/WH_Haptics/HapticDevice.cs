@@ -246,15 +246,15 @@ namespace Polygoat.Haptics
 
                     audioAnalyzer.AnalyzeSound(audioSource, sampleSize, out rms, out db, out pitch);
 
-                    Debug.Log("rms: " + rms);
-                    Debug.Log("db: " + db);
-                    Debug.Log("pitch: " + pitch);
+                    // Debug.Log("rms: " + rms);
+                    // Debug.Log("db: " + db);
+                    // Debug.Log("pitch: " + pitch);
 
                     //trigger pulse
                     audioAnalyzer.minDb = -30;
                     float maxDb = -audioAnalyzer.minDb;
                     float hapticsAmplitude = (db - audioAnalyzer.minDb) / maxDb;
-                    Debug.Log("hapticsAmplitude: " + hapticsAmplitude);
+                    // Debug.Log("hapticsAmplitude: " + hapticsAmplitude);
 
                     TriggerPulse(hapticPulseDuration, testFrequency, Mathf.Abs(hapticsAmplitude));
 
