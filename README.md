@@ -79,19 +79,19 @@ If you want to reference our work, please use the following bibtex entry:
 
 ```
 @inproceedings{degraenfruchard2021weirdinghaptics,
-  author={Degraen, Donald and Fruchard, Bruno and Smolders, Frederik and Potetsianakis, Emmanouil and G\"{u}ng\"{o}r, Seref and Kr\"{u}ger, Antonio and Steimle, J\"{u}rgen},
-  title={Weirding Haptics: In-Situ Prototyping of Vibrotactile Feedback in Virtual Reality through Vocalization},
-  year={2021},
-  isbn = {},
+  author = {Degraen, Donald and Fruchard, Bruno and Smolders, Frederik and Potetsianakis, Emmanouil and G\"{u}ng\"{o}r, Seref and Kr\"{u}ger, Antonio and Steimle, J\"{u}rgen},
+  title = {Weirding Haptics: In-Situ Prototyping of Vibrotactile Feedback in Virtual Reality through Vocalization},
+  year = {2021},
+  isbn = {9781450386357},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
   url = {https://doi.org/10.1145/3472749.3474797},
   doi = {10.1145/3472749.3474797},
-  booktitle = {Proceedings of the 34nd Annual ACM Symposium on User Interface Software and Technology},
-  pages = {},
-  numpages = {},
-  keywords = {haptic design, vibrotactile feedback, virtual reality, design tool, voice input, vocalization, direct manipulation},
-  location = {Virtual, Online},
+  booktitle = {The 34th Annual ACM Symposium on User Interface Software and Technology},
+  pages = {936–953},
+  numpages = {18},
+  keywords = {vibrotactile feedback, voice input, virtual reality, direct manipulation, Haptic design, design tool, vocalization},
+  location = {Virtual Event, USA},
   series = {UIST '21}
 }
 ```
